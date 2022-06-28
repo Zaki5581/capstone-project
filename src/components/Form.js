@@ -1,9 +1,8 @@
 import {nanoid} from 'nanoid';
 import {useState} from 'react';
 
+import data from '../data.json';
 import StyledForm from '../style/StyledForm';
-
-import {Workouts} from './db';
 
 export default function Form() {
   const [plans, setPlans] = useState([]);
@@ -17,20 +16,20 @@ export default function Form() {
     setPlans([...plans, newExercise]);
   }
 
-  const Exercise = Workouts[0].exercise;
+  const exercises = data[0].exercise;
   return (
     <StyledForm onSubmit={handleSubmit}>
       <label htmlFor="input1">Exercise:</label>
-      <select value={Exercise.value} onChange={handleChange}>
-        {Exercise.map(workout => (
-          <option key={nanoid()}>{workout}</option>
+      <select value={exercises.value} onChange={handleChange}>
+        {exercises.map(exercise => (
+          <option key={nanoid()}>{exercise}</option>
         ))}
       </select>
       <ul>
         {plans.map(plan => (
           <li key={nanoid()}>
             {plan}
-            <input className="setsInput" type="number" />
+            <input className="sets-input" type="number" />
           </li>
         ))}
       </ul>

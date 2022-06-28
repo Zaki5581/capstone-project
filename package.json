@@ -52,6 +52,7 @@
     "jest": "^28.1.0",
     "jest-config": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
+    "json-loader": "^0.5.7",
     "lint-staged": "^13.0.0",
     "prettier": "^2.6.2",
     "react-scripts": "^5.0.1",

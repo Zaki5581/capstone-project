@@ -13,7 +13,7 @@ const StyledForm = styled.form`
     border: 1px solid;
     width: fit-content;
   }
-  .setsInput {
+  .sets-input {
     width: 2rem;
   }
 `;
