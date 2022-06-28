@@ -10,11 +10,10 @@ const StyledForm = styled.form`
     justify-content: space-between;
   }
   ul {
-    border: 1px solid;
     width: fit-content;
   }
   .sets-input {
-    width: 2rem;
+    width: 4rem;
   }
 `;
 export default StyledForm;
