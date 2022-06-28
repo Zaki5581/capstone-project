@@ -21,6 +21,7 @@ export default function Form() {
     <StyledForm onSubmit={handleSubmit}>
       <label htmlFor="input1">Exercise:</label>
       <select value={exercises.value} onChange={handleChange}>
+        <option value={'default'}>Choose an exercise</option>
         {exercises.map(exercise => (
           <option key={nanoid()}>{exercise}</option>
         ))}
