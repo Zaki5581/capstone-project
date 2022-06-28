@@ -1,3 +1,4 @@
+import {nanoid} from 'nanoid';
 import {useState} from 'react';
 
 import StyledForm from '../style/StyledForm';
@@ -22,12 +23,12 @@ export default function Form() {
       <label htmlFor="input1">Exercise:</label>
       <select value={Exercise.value} onChange={handleChange}>
         {Exercise.map(workout => (
-          <option key={workout.id}>{workout}</option>
+          <option key={nanoid()}>{workout}</option>
         ))}
       </select>
       <ul>
         {plans.map(plan => (
-          <li key={Workouts.id}>
+          <li key={nanoid()}>
             {plan}
             <input className="setsInput" type="number" />
           </li>

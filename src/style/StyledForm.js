@@ -6,6 +6,8 @@ const StyledForm = styled.form`
 
   li {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
   }
   ul {
     border: 1px solid;
