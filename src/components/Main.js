@@ -8,9 +8,7 @@ export default function Form() {
   const [selectedBodypart, setSelectedBodypart] = useState('');
   const [plans, setPlans] = useState([]);
   const [weeks, setWeeks] = useState(JSON.parse(localStorage.getItem('my_plan')) || []);
-
   //handlesubmit
-
   function handleSubmit(event) {
     event.preventDefault();
     saveWeek();
@@ -20,18 +18,14 @@ export default function Form() {
     const newPlan = event.target.value;
     setPlans([...plans, {name: newPlan, id: nanoid()}]);
   }
-
   // workouts store
-
   useEffect(() => {
     localStorage.setItem('my_plan', JSON.stringify(weeks));
   }, [weeks]);
-
   //setting the sets
   function updateSets(index, value) {
     setPlans([...plans.slice(0, index), {...plans[index], sets: value}, ...plans.slice(index + 1)]);
   }
-
   //save multiple workouts
   function saveWeek() {
     const newSet = {exercise: plans, bodyPart: selectedBodypart};
@@ -39,17 +33,14 @@ export default function Form() {
     setPlans([]);
     setSelectedBodypart('');
   }
-
   //delete day-plan
   function deletMyPlan(index) {
     setWeeks([...weeks.slice(0, index), ...weeks.slice(index + 1)]);
   }
-
   //filtering data from the json
   const allBodyParts = Object.values(data);
   const filteredExercises = data.find(workout => workout.parts === selectedBodypart)?.exercises;
   //const allExercises = exercisesGroups.flat(Infinity);
-
   return (
     <StyledMain>
       <form onSubmit={handleSubmit}>
