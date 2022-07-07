@@ -28,7 +28,6 @@ const StyledMain = styled.main`
   }
   ul {
     min-width: 200px;
-
     width: fit-content;
   }
   .setsInput {
@@ -58,7 +57,6 @@ const StyledMain = styled.main`
   .day-plan {
     display: flex;
     flex-direction: column;
-
     margin-right: 0.5rem;
     border-radius: 7px;
   }
