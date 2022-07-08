@@ -28,10 +28,12 @@ export default function Form() {
   }
   //save multiple workouts
   function saveWeek() {
-    const newSet = {exercise: plans, bodyPart: selectedBodypart};
-    setWeeks([...weeks, newSet]);
-    setPlans([]);
-    setSelectedBodypart('');
+    if (plans.length > 0) {
+      const newSet = {exercise: plans, bodyPart: selectedBodypart};
+      setWeeks([...weeks, newSet]);
+      setPlans([]);
+      setSelectedBodypart('');
+    }
   }
   //delete day-plan
   function deletMyPlan(index) {
@@ -76,7 +78,7 @@ export default function Form() {
             </li>
           ))}
         </ul>
-        <button type="submit">button</button>
+        <button type="submit">save</button>
       </form>
       <div className="weeks-plan">
         {weeks.map((week, index) => (

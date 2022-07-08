@@ -28,8 +28,10 @@ const StyledMain = styled.main`
   }
 
   .sets-input {
-    width: 5rem;
+    border: 3px solid green;
+    width: 4rem;
     height: 1.8rem;
+    margin-right: 1rem;
   }
   button {
     margin: 2rem auto;
