@@ -23,7 +23,7 @@ export default function Form() {
     localStorage.setItem('my_plan', JSON.stringify(weeks));
   }, [weeks]);
   //setting the sets
-  function updateSets(index, value) {
+  function updateSets(id, value) {
     setPlans([...plans.slice(0, id), {...plans[id], sets: value}, ...plans.slice(id + 1)]);
   }
   //save multiple workouts
