@@ -1,19 +1,10 @@
-import styled from 'styled-components';
-
-import Form from './components/Form';
+import Main from './components/Main';
 
 export default function App() {
   return (
-    <Main>
+    <div>
       <h2>Fitness App</h2>
-      <Form />
-    </Main>
+      <Main />
+    </div>
   );
 }
-
-const Main = styled.main`
-  h2 {
-    display: flex;
-    justify-content: center;
-  }
-`;

@@ -1,41 +1,59 @@
 [
   {
     "id": 1,
-    "day": "day1",
     "parts": "chest",
-    "exercise": ["benchpress", "Incline Bench Press", "Dumbbell Flys", "Dumbbell Bench Press", "Dumbbell Pullover"]
+    "exercises": [
+      {"name": "benchpress", "id": 1},
+      {"name": "Incline Bench Press", "id": 2},
+      {"name": "Dumbbell Flys", "id": 3},
+      {"name": "Dumbbell Bench Press", "id": 4},
+      {"name": "Dumbbell Pullover", "id": 5}
+    ]
   },
   {
     "id": 2,
     "parts": "shoulders",
-    "exercise": [
-      "Dumbbell Lateral Raise",
-      "Military Press",
-      "Bent Over Reverse Fly",
-      "Lateral Raise",
-      "Dumbbell Front Raise"
+    "exercises": [
+      {"name": "Dumbbell Lateral Raise", "id": 1},
+      {"name": "Military Press", "id": 2},
+      {"name": "Bent Over Reverse Fly", "id": 3},
+      {"name": "Lateral Raise", "id": 4},
+      {"name": "Dumbbell Front Raise", "id": 5}
     ]
   },
   {
     "id": 3,
     "parts": "arms",
-    "exercise": [
-      "Hammer Curl",
-      "Standing Barbell Curl",
-      "Spider Curl",
-      "EZ Bar Skullcrusher",
-      "Dumbbell Extension",
-      "Cable Tricep Extension"
+    "exercises": [
+      {"name": "Hammer Curl", "id": 1},
+      {"name": "Standing Barbell Curl", "id": 2},
+      {"name": "Spider Curl", "id": 3},
+      {"name": "EZ Bar Skullcrusher", "id": 4},
+      {"name": "Dumbbell Extension", "id": 5},
+      {"name": "Cable Tricep Extension", "id": 6}
     ]
   },
   {
     "id": 4,
     "parts": "back",
-    "exercise": ["Bent Over Row", "Seated Cable Row", "Pull-up", "Renegade Row", "Machine T-Bar Row"]
+    "exercises": [
+      {"name": "Bent Over Row", "id": 1},
+      {"name": "Seated Cable Row", "id": 2},
+      {"name": "Pull-up", "id": 3},
+      {"name": "Renegade Row", "id": 4},
+      {"name": "Machine T-Bar Row", "id": 5}
+    ]
   },
   {
     "id": 5,
     "parts": "legs",
-    "exercise": ["squat", "Hack Squat", "Leg-curls", "Legpress", "Leg Extension", "Standing Calf Raise"]
+    "exercises": [
+      {"name": "squat", "id": 1},
+      {"name": "Hack Squat", "id": 2},
+      {"name": "Leg-curls", "id": 3},
+      {"name": "Legpress", "id": 4},
+      {"name": "Leg Extension", "id": 5},
+      {"name": "Standing Calf Raise", "id": 6}
+    ]
   }
 ]
