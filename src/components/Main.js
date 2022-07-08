@@ -23,8 +23,8 @@ export default function Form() {
     localStorage.setItem('my_plan', JSON.stringify(weeks));
   }, [weeks]);
   //setting the sets
-  function updateSets(id, value) {
-    setPlans([...plans.slice(0, id), {...plans[id], sets: value}, ...plans.slice(id + 1)]);
+  function updateSets(index, value) {
+    setPlans([...plans.slice(0, index), {...plans[index], sets: value}, ...plans.slice(index + 1)]);
   }
   //save multiple workouts
   function saveWeek() {
@@ -34,8 +34,8 @@ export default function Form() {
     setSelectedBodypart('');
   }
   //delete day-plan
-  function deletMyPlan(id) {
-    setWeeks([...weeks.slice(0, id), ...weeks.slice(id + 1)]);
+  function deletMyPlan(index) {
+    setWeeks([...weeks.slice(0, index), ...weeks.slice(index + 1)]);
   }
   //filtering data from the json
   const allBodyParts = Object.values(data);
