@@ -26,14 +26,10 @@ const StyledMain = styled.main`
     flex-direction: row;
     justify-content: center;
   }
-  ul {
-    min-width: 200px;
-    width: fit-content;
-  }
-  .setsInput {
-    width: 2rem;
-    height: 0.8rem;
-    margin-left: 1.5rem;
+
+  .sets-input {
+    width: 5rem;
+    height: 1.8rem;
   }
   button {
     margin: 2rem auto;
@@ -50,7 +46,6 @@ const StyledMain = styled.main`
     justify-content: center;
   }
   .weeks-plan {
-    border: 1px solid;
     display: flex;
     overflow-x: auto;
   }

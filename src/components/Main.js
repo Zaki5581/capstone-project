@@ -24,7 +24,7 @@ export default function Form() {
   }, [weeks]);
   //setting the sets
   function updateSets(index, value) {
-    setPlans([...plans.slice(0, index), {...plans[index], sets: value}, ...plans.slice(index + 1)]);
+    setPlans([...plans.slice(0, id), {...plans[id], sets: value}, ...plans.slice(id + 1)]);
   }
   //save multiple workouts
   function saveWeek() {
@@ -34,19 +34,19 @@ export default function Form() {
     setSelectedBodypart('');
   }
   //delete day-plan
-  function deletMyPlan(index) {
-    setWeeks([...weeks.slice(0, index), ...weeks.slice(index + 1)]);
+  function deletMyPlan(id) {
+    setWeeks([...weeks.slice(0, id), ...weeks.slice(id + 1)]);
   }
   //filtering data from the json
   const allBodyParts = Object.values(data);
   const filteredExercises = data.find(workout => workout.parts === selectedBodypart)?.exercises;
-  //const allExercises = exercisesGroups.flat(Infinity);
+
   return (
     <StyledMain>
       <form onSubmit={handleSubmit}>
         <label htmlFor="input1">Body part</label>
         <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
-          <option key={nanoid()}>Choose a body part:</option>
+          <option>Choose a body part:</option>
           {allBodyParts.map(part => (
             <option key={part.id}>{part.parts}</option>
           ))}
@@ -82,7 +82,7 @@ export default function Form() {
         {weeks.map((week, index) => (
           <div className="day-plan" key={nanoid()}>
             <h3>{week.bodyPart}</h3>
-            <ul key={week.id}>
+            <ul>
               {week.exercise.map(workout => (
                 <li key={workout.id} className="workout-plan2">
                   {workout.name}: {workout.sets}
