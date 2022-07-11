@@ -21,18 +21,15 @@ const StyledMain = styled.main`
   li {
     list-style: none;
     width: 240px;
-    margin: 8px 0px;
-    color: red;
+    margin: 8px 0;
   }
 
   .weeks-plan {
     grid-area: bottom;
-    border: 4px solid purple;
     display: flex;
     overflow-x: auto;
   }
   .workout-block {
-    border: 1px solid red;
     position: relative;
     min-width: 15rem;
     min-height: 8rem;
@@ -64,7 +61,7 @@ const StyledMain = styled.main`
 
   h3 {
     width: fit-content;
-    margin: 0px 75px;
+    margin: 0 75px;
     text-align: center;
   }
   .done-button {
