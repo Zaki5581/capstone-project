@@ -28,10 +28,12 @@ export default function Form() {
   }
   //save multiple workouts
   function saveWeek() {
-    const newSet = {exercise: plans, bodyPart: selectedBodypart};
-    setWeeks([...weeks, newSet]);
-    setPlans([]);
-    setSelectedBodypart('');
+    if (plans.length > 0) {
+      const newSet = {exercise: plans, bodyPart: selectedBodypart};
+      setWeeks([...weeks, newSet]);
+      setPlans([]);
+      setSelectedBodypart('');
+    }
   }
   //delete day-plan
   function deletMyPlan(index) {
@@ -46,7 +48,7 @@ export default function Form() {
       <form onSubmit={handleSubmit}>
         <label htmlFor="input1">Body part</label>
         <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
-          <option>Choose a body part:</option>
+          <option disabled>Choose a body part:</option>
           {allBodyParts.map(part => (
             <option key={part.id}>{part.parts}</option>
           ))}
@@ -55,14 +57,16 @@ export default function Form() {
           <>
             <label htmlFor="input2">Exercise:</label>
             <select name="input2" onChange={createPlan}>
-              <option value={'default'}>Choose an exercise</option>
+              <option value={'default'} disabled>
+                Choose an exercise
+              </option>
               {filteredExercises?.map(exercise => (
                 <option key={exercise.id}>{exercise.name}</option>
               ))}
             </select>
           </>
         )}
-        <ul>
+        <ul className="plan-top">
           {plans.map((plan, index) => (
             <li key={plan.id} className="workout-plan">
               {plan.name}
@@ -72,19 +76,20 @@ export default function Form() {
                 min="1"
                 type="number"
                 onChange={event => updateSets(index, event.target.value)}
+                required
               />
             </li>
           ))}
         </ul>
-        <button type="submit">button</button>
+        <button type="submit">save</button>
       </form>
       <div className="weeks-plan">
         {weeks.map((week, index) => (
-          <div className="day-plan" key={nanoid()}>
+          <div className="workout-block" key={nanoid()}>
             <h3>{week.bodyPart}</h3>
             <ul>
               {week.exercise.map(workout => (
-                <li key={workout.id} className="workout-plan2">
+                <li key={workout.id}>
                   {workout.name}: {workout.sets}
                 </li>
               ))}
