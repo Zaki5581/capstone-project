@@ -1,5 +1,4 @@
 import {nanoid} from 'nanoid';
-
 import {useState} from 'react';
 
 import StyledNutrition from '../style/StyledNutrition';
