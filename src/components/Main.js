@@ -74,6 +74,7 @@ export default function Form() {
                 min="1"
                 type="number"
                 onChange={event => updateSets(index, event.target.value)}
+                required
               />
             </li>
           ))}

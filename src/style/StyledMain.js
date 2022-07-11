@@ -28,7 +28,6 @@ const StyledMain = styled.main`
   }
 
   .sets-input {
-    border: 3px solid green;
     width: 4rem;
     height: 1.8rem;
     margin-right: 1rem;
