@@ -10,8 +10,8 @@ export default styled.createGlobalStyle`
 
   body {
     margin: 0;
-    font-size: 1.125rem;
-    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-family: 'Roboto Slab', serif;
   }
 
   button,
