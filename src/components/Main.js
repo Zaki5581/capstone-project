@@ -1,10 +1,12 @@
 import {nanoid} from 'nanoid';
 import {useState, useEffect} from 'react';
+import {toast} from 'react-toastify';
 
 import data from '../data.json';
 import StyledMain from '../style/StyledMain';
 
 export default function Form() {
+  const [date, setDate] = useState();
   const [selectedBodypart, setSelectedBodypart] = useState('');
   const [plans, setPlans] = useState([]);
   const [weeks, setWeeks] = useState(JSON.parse(localStorage.getItem('my_plan')) || []);
@@ -23,38 +25,47 @@ export default function Form() {
     localStorage.setItem('my_plan', JSON.stringify(weeks));
   }, [weeks]);
   //setting the sets
-  function updateSets(index, value) {
-    setPlans([...plans.slice(0, index), {...plans[index], sets: value}, ...plans.slice(index + 1)]);
+  function updateSets(index, value, date) {
+    setPlans([...plans.slice(0, index), {...plans[index], sets: value, date}, ...plans.slice(index + 1)]);
   }
   //save multiple workouts
   function saveWeek() {
     if (plans.length > 0) {
-      const newSet = {exercise: plans, bodyPart: selectedBodypart};
+      const newSet = {exercise: plans, bodyPart: selectedBodypart, date};
       setWeeks([...weeks, newSet]);
       setPlans([]);
       setSelectedBodypart('');
+      setDate('');
+      toast.success('Your training is saved!!');
     }
   }
   //delete day-plan
   function deletMyPlan(index) {
     setWeeks([...weeks.slice(0, index), ...weeks.slice(index + 1)]);
+    toast.success('DELETED!');
   }
   //filtering data from the json
   const allBodyParts = Object.values(data);
   const filteredExercises = data.find(workout => workout.parts === selectedBodypart)?.exercises;
 
+  //dnd state/function
+
   return (
     <StyledMain>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="input1">Body part</label>
-        <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
-          <option disabled>Choose a body part:</option>
-          {allBodyParts.map(part => (
-            <option key={part.id}>{part.parts}</option>
-          ))}
-        </select>
+        <div className="bodypart-row">
+          <label htmlFor="input1">Body part:</label>
+          <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
+            <option disabled>Choose a body part:</option>
+            {allBodyParts.map(part => (
+              <option key={part.id}>{part.parts}</option>
+            ))}
+          </select>
+          <label htmlFor="date">Date:</label>
+          <input className="date-input" name="date" type="date" onChange={e => setDate(e.target.value)} required />
+        </div>
         {filteredExercises && (
-          <>
+          <div className="exercise-row">
             <label htmlFor="input2">Exercise:</label>
             <select name="input2" onChange={createPlan}>
               <option value={'default'} disabled>
@@ -64,11 +75,11 @@ export default function Form() {
                 <option key={exercise.id}>{exercise.name}</option>
               ))}
             </select>
-          </>
+          </div>
         )}
-        <ul className="plan-top">
+        <dl className="plan-top">
           {plans.map((plan, index) => (
-            <li key={plan.id} className="workout-plan">
+            <dd key={plan.id} className="workout-plan">
               {plan.name}
               <input
                 name={'plan' + plan.id}
@@ -78,20 +89,21 @@ export default function Form() {
                 onChange={event => updateSets(index, event.target.value)}
                 required
               />
-            </li>
+            </dd>
           ))}
-        </ul>
+        </dl>
         <button type="submit">save</button>
       </form>
       <div className="weeks-plan">
         {weeks.map((week, index) => (
           <div className="workout-block" key={nanoid()}>
-            <h3>{week.bodyPart}</h3>
-            <ul>
+            <dl>
+              <h4>{week.date}</h4>
+              <h3>{week.bodyPart}</h3>
               {week.exercise.map(workout => (
-                <li key={workout.id}>
+                <dd key={nanoid()}>
                   {workout.name}: {workout.sets}
-                </li>
+                </dd>
               ))}
               <button
                 className="done-button"
@@ -101,7 +113,7 @@ export default function Form() {
               >
                 Done
               </button>
-            </ul>
+            </dl>
           </div>
         ))}
       </div>
