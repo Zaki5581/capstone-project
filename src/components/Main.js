@@ -26,12 +26,12 @@ export default function Form() {
   }, [weeks]);
   //setting the sets
   function updateSets(index, value, date) {
-    setPlans([...plans.slice(0, index), {...plans[index], sets: value, date: date}, ...plans.slice(index + 1)]);
+    setPlans([...plans.slice(0, index), {...plans[index], sets: value, date}, ...plans.slice(index + 1)]);
   }
   //save multiple workouts
   function saveWeek() {
     if (plans.length > 0) {
-      const newSet = {exercise: plans, bodyPart: selectedBodypart, date: date};
+      const newSet = {exercise: plans, bodyPart: selectedBodypart, date};
       setWeeks([...weeks, newSet]);
       setPlans([]);
       setSelectedBodypart('');
