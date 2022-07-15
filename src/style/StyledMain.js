@@ -14,7 +14,8 @@ const StyledMain = styled.main`
     align-items: center;
     text-align: center;
   }
-  select {
+  select,
+  .date-input {
     background-color: #a0a0a0;
     font-size: 1.1rem;
     width: 11rem;
@@ -22,6 +23,7 @@ const StyledMain = styled.main`
     margin: auto;
     border-radius: 3px;
   }
+
   .bodypart-row {
     margin: auto;
   }

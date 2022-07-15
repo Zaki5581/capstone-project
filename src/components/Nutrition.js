@@ -1,5 +1,6 @@
 import {nanoid} from 'nanoid';
 import {useState, useEffect} from 'react';
+import {toast} from 'react-toastify';
 
 import bau from '../images/icons8-arbeit-80.png';
 import StyledNutrition from '../style/StyledNutrition';
@@ -18,6 +19,7 @@ export default function Nutrition() {
 
   function deleteGoal() {
     setNutrients('');
+    toast.success('Deleted!!Set new nutrients goals!!');
   }
   function deleteReal() {
     setTakenNutrients('');
@@ -35,9 +37,6 @@ export default function Nutrition() {
     setTakenNutrients({...takenNutrients, [name]: value});
   }
 
-  // function showTakenNutrients() {
-
-  // }
   function handleSubmit(event) {
     event.preventDefault();
     event.target.reset();
