@@ -54,20 +54,11 @@ export default function Nutrition() {
         <ul key={nanoid()}>
           <li>
             {nutrients.calories}
-            <bold>Kcal</bold>
+            Kcal
           </li>
-          <li>
-            {nutrients.protein}
-            <bold>g</bold>
-          </li>
-          <li>
-            {nutrients.carbs}
-            <bold>g</bold>
-          </li>
-          <li>
-            {nutrients.fat}
-            <bold>g</bold>
-          </li>
+          <li>{nutrients.protein}g</li>
+          <li>{nutrients.carbs}g</li>
+          <li>{nutrients.fat}g</li>
         </ul>
       </div>
       <section>

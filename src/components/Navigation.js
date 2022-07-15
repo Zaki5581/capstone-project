@@ -20,12 +20,14 @@ export default function Navigation() {
       }}
     >
       <h3>&#8593; Start &#8593;</h3>
-      <ion-icon
-        name="barbell-outline"
-        onClick={() => {
-          setExpand(expand => !expand);
-        }}
-      ></ion-icon>
+      <button>
+        <ion-icon
+          name="barbell-outline"
+          onClick={() => {
+            setExpand(expand => !expand);
+          }}
+        ></ion-icon>
+      </button>
       {expand && (
         <>
           <motion.a

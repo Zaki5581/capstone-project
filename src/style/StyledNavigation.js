@@ -20,11 +20,13 @@ const StyledNavigation = styled.nav`
     text-align: center;
     border-radius: 5px;
   }
-  ion-icon {
+  button {
     position: absolute;
     top: 8rem;
     font-size: 72px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
   h3 {
     position: absolute;

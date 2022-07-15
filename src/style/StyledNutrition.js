@@ -27,9 +27,6 @@ const StyledNutrition = styled.form`
     justify-content: space-around;
     padding-left: 0;
   }
-  bold {
-    color: red;
-  }
 
   button {
     width: 5rem;
