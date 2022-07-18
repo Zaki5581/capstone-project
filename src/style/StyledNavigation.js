@@ -34,7 +34,7 @@ const StyledNavigation = styled.nav`
     background-color: transparent;
     border: none;
   }
-
+  /* jshint ignore:start*/
   h3 {
     position: absolute;
     top: 9rem;
@@ -56,6 +56,7 @@ const StyledNavigation = styled.nav`
         0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
     }
   }
+  /* jshint ignore:end */
 `;
 
 export default StyledNavigation;

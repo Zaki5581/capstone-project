@@ -35,8 +35,10 @@ const StyledNutrition = styled.form`
   }
   button {
     background-color: #e8c014;
-    width: 6rem;
-    height: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 13rem;
+    height: 2rem;
     border-radius: 7px;
     bottom: 1rem;
     border: none;

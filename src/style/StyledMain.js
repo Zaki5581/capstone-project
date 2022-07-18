@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import walls from '../images/wall.jpg';
+import walls from '../images/metal.jpg';
 
 const StyledMain = styled.main`
   height: 110vh;
@@ -93,7 +93,7 @@ const StyledMain = styled.main`
     font-size: 1.1rem;
     width: fit-content;
     height: fit-content;
-    border-radius: 7px;
+    border-radius: 5%;
     display: grid;
     grid-template-areas:
       'area4'
@@ -103,6 +103,7 @@ const StyledMain = styled.main`
     margin: 0 0.5rem;
   }
   h4 {
+    color: black;
     font-size: 0.8rem;
     grid-area: area4;
   }
@@ -123,12 +124,14 @@ const StyledMain = styled.main`
   .done-button,
   .set-button {
     background-color: #e8c014;
-    width: 6rem;
-    height: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 13rem;
+    height: 2rem;
     border-radius: 7px;
     bottom: 1rem;
     border: none;
-    margin: 1rem 0;
+    margin: 1rem auto;
   }
 `;
 export default StyledMain;
