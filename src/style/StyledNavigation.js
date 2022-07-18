@@ -46,15 +46,16 @@ const StyledNavigation = styled.nav`
     font-weight: 700;
     text-transform: uppercase;
     animation: blur 1.75s ease-out infinite;
-    text-shadow: 0px 0px 3px rgba(218, 165, 32), 0px 0px 7px rgba(218, 165, 32);
+    text-shadow: 0.1px 0.1px 3px rgba(218, 165, 32), 0.1px 0.1px 7px rgba(218, 165, 32);
   }
 
   @keyframes blur {
     from {
-      text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
-        0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
-        0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+      text-shadow: 0.1px 0.1px 10px #fff, 0.1px 0.1px 10px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff,
+        0.1px 0px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 50px #fff,
+        0.1px 0.1px 50px #fff, 0.1px 0.1px 50px #7b96b8, 0.1px 0.1px 150px #7b96b8, 0.1px 10px 100px #7b96b8,
+        0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px -10px 100px #7b96b8,
+        0.1px -10px 100px #7b96b8;
     }
   }
 `;
