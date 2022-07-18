@@ -2,10 +2,10 @@ import {nanoid} from 'nanoid';
 import {useState, useEffect} from 'react';
 import {toast} from 'react-toastify';
 
-import bau from '../images/icons8-arbeit-80.png';
 import StyledNutrition from '../style/StyledNutrition';
 
-//setting nutrients goals
+import BarChart from './charts/BarChart';
+
 export default function Nutrition() {
   const [nutrients, setNutrients] = useState(JSON.parse(localStorage.getItem('my_goal')) || []);
   //setting taken nutrients
@@ -15,8 +15,50 @@ export default function Nutrition() {
     localStorage.setItem('my_goal', JSON.stringify(nutrients));
     localStorage.setItem('my_real', JSON.stringify(takenNutrients));
   }, [nutrients, takenNutrients]);
-  //reste functions
+  //getting the values for the chart
+  const Nutrients = Array.of(nutrients);
+  const TakenNutrients = Array.of(takenNutrients);
+  const average1 = TakenNutrients[0].takenCalories / Nutrients[0].calories;
+  const average2 = TakenNutrients[0].takenProtein / Nutrients[0].protein;
+  const average3 = TakenNutrients[0].takenCarbs / Nutrients[0].carbs;
+  const average4 = TakenNutrients[0].takenFat / Nutrients[0].fat;
+  //setting the chart data
+  const user = {
+    labels: ['Average intake'],
 
+    datasets: [
+      {
+        label: 'Calories',
+        data: [average1],
+        backgroundColor: ['#E8C014'],
+        borderColor: '#000030',
+        borderWidth: 2,
+      },
+      {
+        label: 'Protein',
+        data: [average2],
+        backgroundColor: ['#A08C59'],
+        borderColor: '#000030',
+        borderWidth: 2,
+      },
+      {
+        label: 'Carbs',
+        data: [average3],
+        backgroundColor: ['#FFEFCA'],
+        borderColor: '#000030',
+        borderWidth: 2,
+      },
+      {
+        label: 'Fat',
+        data: [average4],
+        backgroundColor: ['#005246'],
+        borderColor: '#000030',
+        borderWidth: 0.5,
+      },
+    ],
+  };
+
+  //reset functions
   function deleteGoal() {
     setNutrients('');
     toast.success('Deleted!!Set new nutrients goals!!');
@@ -43,14 +85,14 @@ export default function Nutrition() {
   }
   return (
     <StyledNutrition onSubmit={handleSubmit}>
-      <div className="input-field1">
-        <div className="input-block1">
-          <input type="number" name="calories" onChange={handleChange} />
-          <input type="number" name="protein" onChange={handleChange} />
-          <input type="number" name="carbs" onChange={handleChange} />
-          <input type="number" name="fat" onChange={handleChange} />
+      <div>
+        <div className="input-block">
+          <input type="number" name="calories" onChange={handleChange} placeholder="Calories" />
+          <input type="number" name="protein" onChange={handleChange} placeholder="Protein" />
+          <input type="number" name="carbs" onChange={handleChange} placeholder="Carbs" />
+          <input type="number" name="fat" onChange={handleChange} placeholder="Fat" />
         </div>
-        <button onClick={deleteGoal}>Reset</button>
+        <small>Your setted Nutrients Goal!</small>
         <ul key={nanoid()}>
           <li>
             {nutrients.calories}
@@ -60,23 +102,25 @@ export default function Nutrition() {
           <li>{nutrients.carbs}g</li>
           <li>{nutrients.fat}g</li>
         </ul>
+        <button onClick={deleteGoal}>Reset</button>
       </div>
-      <section>
-        <img src={bau} alt="bau" />
-      </section>
-      <div className="input-field2">
+      <div className="chart">
+        <BarChart chartData={user} />
+      </div>
+      <div>
+        <button onClick={deleteReal}>Delete</button>
         <ul key={nanoid()}>
-          <li>{takenNutrients.takenCalories}</li>
-          <li>{takenNutrients.takenProtein}</li>
-          <li>{takenNutrients.takenCarbs}</li>
-          <li>{takenNutrients.takenFat}</li>
+          <li>{takenNutrients.takenCalories}Kcal</li>
+          <li>{takenNutrients.takenProtein}g</li>
+          <li>{takenNutrients.takenCarbs}g</li>
+          <li>{takenNutrients.takenFat}g</li>
         </ul>
-        <div className="input-block1">
-          <input type="number" name="takenCalories" onChange={handleSecondChange} />
-          <input type="number" name="takenProtein" onChange={handleSecondChange} />
-          <input type="number" name="takenCarbs" onChange={handleSecondChange} />
-          <input type="number" name="takenFat" onChange={handleSecondChange} />
-          <button onClick={deleteReal}>Delete</button>
+        <small>current intake</small>
+        <div className="input-block">
+          <input type="number" name="takenCalories" onChange={handleSecondChange} placeholder="Calories" />
+          <input type="number" name="takenProtein" onChange={handleSecondChange} placeholder="Protein" />
+          <input type="number" name="takenCarbs" onChange={handleSecondChange} placeholder="Carbs" />
+          <input type="number" name="takenFat" onChange={handleSecondChange} placeholder="Fat" />
         </div>
       </div>
     </StyledNutrition>

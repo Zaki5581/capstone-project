@@ -1,49 +1,59 @@
 import styled from 'styled-components';
 
 const StyledNutrition = styled.form`
-  height: 90vh;
-  display: grid;
-  grid-template-areas: 'input1' 'section' 'input2';
-  grid-template-rows: 6rem 1fr 6rem;
-  .input-field1 {
-    grid-area: input1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 1rem;
-  }
+  height: fit-content;
+  background-color: #000030;
+  color: #a0a0a0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
   input {
+    background-color: #ffefca;
     font-size: 1rem;
-    width: 3rem;
+    width: 3.6rem;
     height: 1.5rem;
     margin: 0.3rem;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
   }
-  .input-block1,
+  .input-block {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   ul {
     list-style: none;
-    width: 75vw;
     display: flex;
     justify-content: space-around;
-    padding-left: 0;
+    margin-right: 1rem;
   }
-
+  li {
+    font-size: 1.1rem;
+    color: #e8c014;
+  }
   button {
-    width: 5rem;
-    position: absolute;
-    right: 0.5rem;
+    background-color: #e8c014;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 7px;
+    bottom: 1rem;
+    border: none;
+    margin: 0.5rem 0;
   }
-
-  .input-field2 {
-    grid-area: input2;
+  .chart {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+    align-items: center;
+    background-color: beige;
+    height: 20rem;
   }
-  section {
-    grid-area: section;
-    border: 1px solid red;
-    margin-bottom: 1rem;
+  small {
+    color: white;
+    font-weight: 100;
+    font-size: 0.7rem;
   }
 `;
 

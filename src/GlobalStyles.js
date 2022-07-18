@@ -10,13 +10,10 @@ export default styled.createGlobalStyle`
 
   body {
     margin: 0;
-    font-size: 1.3rem;
-    font-family: 'Roboto Slab', serif;
-  }
-
-  button,
-  input,
-  textarea {
-    font: inherit;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Sintony', sans-serif;
   }
 `;
