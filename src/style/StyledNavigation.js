@@ -35,7 +35,6 @@ const StyledNavigation = styled.nav`
     border: none;
   }
 
-  /* eslint-disable */
   h3 {
     position: absolute;
     top: 9rem;
@@ -46,19 +45,23 @@ const StyledNavigation = styled.nav`
     font-weight: 700;
     text-transform: uppercase;
     animation: blur 1.75s ease-out infinite;
-    text-shadow: 0px 0px 3px rgba(218, 165, 32), 0px 0px 7px rgba(218, 165, 32);
+    text-shadow: 0px 0px 3px rgba(218, 165, 32), 0px 0px 7px rgba(218, 165, 32); // eslint-disable-line
   }
 
   @keyframes blur {
     from {
       text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
-        0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
-        0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+        // eslint-disable-line
+        0px 0px 25px #fff,
+        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+        // eslint-disable-line
+        0px 0px 50px #7b96b8,
+        0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+        // eslint-disable-line
+        0px 10px 100px #7b96b8,
+        0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8; // eslint-disable-line
     }
   }
-
-  /* eslint-enable */
 `;
 
 export default StyledNavigation;
