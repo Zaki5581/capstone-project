@@ -2,10 +2,10 @@ import {nanoid} from 'nanoid';
 import {useState, useEffect} from 'react';
 import {toast} from 'react-toastify';
 
-import bau from '../images/icons8-arbeit-80.png';
 import StyledNutrition from '../style/StyledNutrition';
 
-//setting nutrients goals
+import BarChart from './charts/BarChart';
+
 export default function Nutrition() {
   const [nutrients, setNutrients] = useState(JSON.parse(localStorage.getItem('my_goal')) || []);
   //setting taken nutrients
@@ -15,8 +15,50 @@ export default function Nutrition() {
     localStorage.setItem('my_goal', JSON.stringify(nutrients));
     localStorage.setItem('my_real', JSON.stringify(takenNutrients));
   }, [nutrients, takenNutrients]);
-  //reste functions
+  //getting the values for the chart
+  const Nutrients = Array.of(nutrients);
+  const TakenNutrients = Array.of(takenNutrients);
+  const average1 = TakenNutrients[0].takenCalories / Nutrients[0].calories;
+  const average2 = TakenNutrients[0].takenProtein / Nutrients[0].protein;
+  const average3 = TakenNutrients[0].takenCarbs / Nutrients[0].carbs;
+  const average4 = TakenNutrients[0].takenFat / Nutrients[0].fat;
+  //setting the chart data
+  const user = {
+    labels: ['How the day is going'],
 
+    datasets: [
+      {
+        label: 'Calories',
+        data: [average1],
+        backgroundColor: ['#E8C014'],
+        borderColor: 'gray',
+        borderWidth: 2,
+      },
+      {
+        label: 'Protein',
+        data: [average2],
+        backgroundColor: ['#A08C59'],
+        borderColor: 'gray',
+        borderWidth: 2,
+      },
+      {
+        label: 'Carbs',
+        data: [average3],
+        backgroundColor: ['#FFEFCA'],
+        borderColor: 'gray',
+        borderWidth: 2,
+      },
+      {
+        label: 'Fat',
+        data: [average4],
+        backgroundColor: ['#005246'],
+        borderColor: 'gray',
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  //reset functions
   function deleteGoal() {
     setNutrients('');
     toast.success('Deleted!!Set new nutrients goals!!');
@@ -61,9 +103,9 @@ export default function Nutrition() {
           <li>{nutrients.fat}g</li>
         </ul>
       </div>
-      <section>
-        <img src={bau} alt="bau" />
-      </section>
+      <div className="chart">
+        <BarChart chartData={user} />
+      </div>
       <div className="input-field2">
         <ul key={nanoid()}>
           <li>{takenNutrients.takenCalories}</li>

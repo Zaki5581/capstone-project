@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 const StyledNutrition = styled.form`
-  height: 90vh;
+  height: 100vh;
   display: grid;
   grid-template-areas: 'input1' 'section' 'input2';
-  grid-template-rows: 6rem 1fr 6rem;
+  grid-template-rows: 6rem auto 6rem;
+  background-color: #000030;
+  color: #a0a0a0;
   .input-field1 {
     grid-area: input1;
     position: relative;
@@ -14,10 +16,13 @@ const StyledNutrition = styled.form`
     margin-top: 1rem;
   }
   input {
+    background-color: #ffefca;
     font-size: 1rem;
     width: 3rem;
     height: 1.5rem;
     margin: 0.3rem;
+    border: none;
+    border-radius: 3px;
   }
   .input-block1,
   ul {
@@ -26,6 +31,9 @@ const StyledNutrition = styled.form`
     display: flex;
     justify-content: space-around;
     padding-left: 0;
+  }
+  li {
+    color: #e8c014;
   }
 
   button {
@@ -38,12 +46,16 @@ const StyledNutrition = styled.form`
     grid-area: input2;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
-  }
-  section {
-    grid-area: section;
-    border: 1px solid red;
+    justify-content: flex-end;
     margin-bottom: 1rem;
+  }
+
+  .chart {
+    grid-area: section;
+    display: flex;
+    align-items: center;
+    background-color: beige;
+    min-height: 20rem;
   }
 `;
 

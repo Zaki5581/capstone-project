@@ -1,7 +1,6 @@
 import {motion} from 'framer-motion';
 import {useState} from 'react';
 
-import picture from '../images/guzman.jpg';
 import ch from '../images/icons8-chicken-32.png';
 import rs from '../images/icons8-reisschüssel-64.png';
 import rk from '../images/rak.png';
@@ -11,14 +10,7 @@ export default function Navigation() {
   const [expand, setExpand] = useState(false);
 
   return (
-    <StyledNavigation
-      style={{
-        backgroundImage: `url(${picture})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <StyledNavigation>
       <h3>&#8593; Start &#8593;</h3>
       <button>
         <ion-icon
@@ -34,7 +26,7 @@ export default function Navigation() {
             className="link"
             animate={{
               x: -50,
-              y: 180,
+              y: 80,
               opacity: 1,
               rotate: 360,
             }}
@@ -55,7 +47,7 @@ export default function Navigation() {
             className="link"
             animate={{
               x: 50,
-              y: 180,
+              y: 80,
               opacity: 1,
               rotate: -360,
             }}

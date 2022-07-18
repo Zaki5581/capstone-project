@@ -54,15 +54,19 @@ export default function Form() {
     <StyledMain>
       <form onSubmit={handleSubmit}>
         <div className="bodypart-row">
-          <label htmlFor="input1">Body part:</label>
-          <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
-            <option disabled>Choose a body part:</option>
-            {allBodyParts.map(part => (
-              <option key={part.id}>{part.parts}</option>
-            ))}
-          </select>
-          <label htmlFor="date">Date:</label>
-          <input className="date-input" name="date" type="date" onChange={e => setDate(e.target.value)} required />
+          <div className="group1">
+            <label htmlFor="input1">Body part</label>
+            <select name="input1" value={selectedBodypart} onChange={event => setSelectedBodypart(event.target.value)}>
+              <option disabled>Choose a body part:</option>
+              {allBodyParts.map(part => (
+                <option key={part.id}>{part.parts}</option>
+              ))}
+            </select>
+          </div>
+          <div className="group2">
+            <label htmlFor="date">Date</label>
+            <input className="date-input" name="date" type="date" onChange={e => setDate(e.target.value)} required />
+          </div>
         </div>
         {filteredExercises && (
           <div className="exercise-row">
@@ -91,29 +95,35 @@ export default function Form() {
               />
             </dd>
           ))}
+          {filteredExercises && (
+            <button className="set-button" type="submit">
+              save
+            </button>
+          )}
         </dl>
-        <button type="submit">save</button>
       </form>
       <div className="weeks-plan">
         {weeks.map((week, index) => (
           <div className="workout-block" key={nanoid()}>
-            <dl>
-              <h4>{week.date}</h4>
-              <h3>{week.bodyPart}</h3>
-              {week.exercise.map(workout => (
-                <dd key={nanoid()}>
-                  {workout.name}: {workout.sets}
-                </dd>
-              ))}
-              <button
-                className="done-button"
-                onClick={() => {
-                  deletMyPlan(index);
-                }}
-              >
-                Done
-              </button>
-            </dl>
+            {!filteredExercises && (
+              <dl className="plan-bottom">
+                <h4>{week.date}</h4>
+                <h3>{week.bodyPart}</h3>
+                {week.exercise.map(workout => (
+                  <dd key={nanoid()}>
+                    {workout.name}: <dd className="sets-field">{workout.sets}Sets</dd>
+                  </dd>
+                ))}
+                <button
+                  className="done-button"
+                  onClick={() => {
+                    deletMyPlan(index);
+                  }}
+                >
+                  Done
+                </button>
+              </dl>
+            )}
           </div>
         ))}
       </div>

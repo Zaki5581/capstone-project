@@ -4,7 +4,7 @@ const StyledHome = styled.div`
   font-size: 2rem;
   width: 100vw;
   margin: auto;
-  background-color: rgba(218, 165, 32);
+  background-color: #e8c014;
   display: flex;
   justify-content: center;
 `;
