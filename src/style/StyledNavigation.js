@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import styled from 'styled-components';
 
 import picture from '../images/guzman.jpg';
@@ -34,7 +36,6 @@ const StyledNavigation = styled.nav`
     background-color: transparent;
     border: none;
   }
-
   h3 {
     position: absolute;
     top: 9rem;
@@ -51,29 +52,9 @@ const StyledNavigation = styled.nav`
   @keyframes blur {
     from {
       text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-        // eslint-disable-line
-        // eslint-disable-line
-        0px 0px 25px #fff,
-        // eslint-disable-line
-        // eslint-disable-line
-        0px 0px 25px #fff,
-        // eslint-disable-line
-        0px 0px 25px #fff,
-        0px 0px 50px #fff, 0px 0px 50px #fff,
-        // eslint-disable-line
-        0px 0px 50px #7b96b8,
-        // eslint-disable-line
-        0px 0px 150px #7b96b8,
-        // eslint-disable-line
-        0px 10px 100px #7b96b8,
-        0px 10px 100px #7b96b8,
-        // eslint-disable-line
-        0px 10px 100px #7b96b8,
-        // eslint-disable-line
-        0px 10px 100px #7b96b8,
-        // eslint-disable-line
-        0px -10px 100px #7b96b8,
-        0px -10px 100px #7b96b8; // eslint-disable-line
+        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+        0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+        0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
     }
   }
 `;
