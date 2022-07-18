@@ -45,7 +45,7 @@ const StyledNavigation = styled.nav`
     font-weight: 500;
     text-transform: uppercase;
     animation: blur 1.75s ease-out infinite;
-    text-shadow: 0px 0px 3px rgba(218, 165, 32), 0px 0px 7px rgba(218, 165, 32);
+    text-shadow: 0 0 3px rgba(218, 165, 32), 0 0 7px rgba(218, 165, 32);
   }
 
   @keyframes blur {
