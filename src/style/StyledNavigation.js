@@ -52,14 +52,28 @@ const StyledNavigation = styled.nav`
     from {
       text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
         // eslint-disable-line
+        // eslint-disable-line
         0px 0px 25px #fff,
-        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+        // eslint-disable-line
+        // eslint-disable-line
+        0px 0px 25px #fff,
+        // eslint-disable-line
+        0px 0px 25px #fff,
+        0px 0px 50px #fff, 0px 0px 50px #fff,
         // eslint-disable-line
         0px 0px 50px #7b96b8,
-        0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+        // eslint-disable-line
+        0px 0px 150px #7b96b8,
         // eslint-disable-line
         0px 10px 100px #7b96b8,
-        0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8; // eslint-disable-line
+        0px 10px 100px #7b96b8,
+        // eslint-disable-line
+        0px 10px 100px #7b96b8,
+        // eslint-disable-line
+        0px 10px 100px #7b96b8,
+        // eslint-disable-line
+        0px -10px 100px #7b96b8,
+        0px -10px 100px #7b96b8; // eslint-disable-line
     }
   }
 `;
