@@ -34,6 +34,7 @@ const StyledNavigation = styled.nav`
     background-color: transparent;
     border: none;
   }
+
   /* eslint-disable */
   h3 {
     position: absolute;
@@ -56,6 +57,7 @@ const StyledNavigation = styled.nav`
         0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
     }
   }
+
   /* eslint-enable */
 `;
 
