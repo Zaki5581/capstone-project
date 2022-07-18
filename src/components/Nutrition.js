@@ -92,6 +92,7 @@ export default function Nutrition() {
           <input type="number" name="carbs" onChange={handleChange} placeholder="Carbs" />
           <input type="number" name="fat" onChange={handleChange} placeholder="Fat" />
         </div>
+        <small>Your setted Nutrients Goal!</small>
         <ul key={nanoid()}>
           <li>
             {nutrients.calories}
@@ -107,13 +108,14 @@ export default function Nutrition() {
         <BarChart chartData={user} />
       </div>
       <div>
+        <button onClick={deleteReal}>Delete</button>
         <ul key={nanoid()}>
           <li>{takenNutrients.takenCalories}Kcal</li>
           <li>{takenNutrients.takenProtein}g</li>
           <li>{takenNutrients.takenCarbs}g</li>
           <li>{takenNutrients.takenFat}g</li>
         </ul>
-        <button onClick={deleteReal}>Delete</button>
+        <small>current intake</small>
         <div className="input-block">
           <input type="number" name="takenCalories" onChange={handleSecondChange} placeholder="Calories" />
           <input type="number" name="takenProtein" onChange={handleSecondChange} placeholder="Protein" />

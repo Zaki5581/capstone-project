@@ -79,7 +79,7 @@ const StyledMain = styled.main`
   }
   .plan-top {
     font-size: 1.1rem;
-    background-color: #ffefca;
+    background-color: rgba(255, 239, 202, 0.8);
     width: 90vw;
     height: auto;
     grid-area: area3;
@@ -89,7 +89,7 @@ const StyledMain = styled.main`
   }
 
   .plan-bottom {
-    background-color: rgba(255, 239, 202, 0.7);
+    background-color: rgba(255, 239, 202, 0.8);
     font-size: 1.1rem;
     width: fit-content;
     height: fit-content;
@@ -113,12 +113,12 @@ const StyledMain = styled.main`
 
   .sets-input {
     background-color: #7c7b77;
-    width: 2.2rem;
+    width: 3rem;
     height: 1.2rem;
     border: none;
     border-radius: 3px;
     position: absolute;
-    right: 0;
+    right: 1rem;
   }
 
   .done-button,
@@ -126,7 +126,7 @@ const StyledMain = styled.main`
     background-color: #e8c014;
     font-size: 1.2rem;
     font-weight: 700;
-    width: 13rem;
+    width: 10rem;
     height: 2rem;
     border-radius: 7px;
     bottom: 1rem;

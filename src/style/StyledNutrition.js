@@ -50,6 +50,11 @@ const StyledNutrition = styled.form`
     background-color: beige;
     height: 20rem;
   }
+  small {
+    color: white;
+    font-weight: 100;
+    font-size: 0.7rem;
+  }
 `;
 
 export default StyledNutrition;
