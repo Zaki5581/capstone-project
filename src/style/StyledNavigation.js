@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import styled from 'styled-components';
 
 import picture from '../images/guzman.jpg';
@@ -52,10 +50,10 @@ const StyledNavigation = styled.nav`
   @keyframes blur {
     from {
       text-shadow: 0.1px 0.1px 10px #fff, 0.1px 0.1px 10px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff,
-        0.1px 0px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 50px #fff,
-        0.1px 0.1px 50px #fff, 0.1px 0.1px 50px #7b96b8, 0.1px 0.1px 150px #7b96b8, 0.1px 10px 100px #7b96b8,
-        0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px -10px 100px #7b96b8,
-        0.1px -10px 100px #7b96b8;
+        0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff, 0.1px 0.1px 25px #fff,
+        0.1px 0.1px 50px #fff, 0.1px 0.1px 50px #fff, 0.1px 0.1px 50px #7b96b8, 0.1px 0.1px 150px #7b96b8,
+        0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8, 0.1px 10px 100px #7b96b8,
+        0.1px -10px 100px #7b96b8, 0.1px -10px 100px #7b96b8;
     }
   }
 `;
