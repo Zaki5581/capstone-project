@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom';
 
-import icon2 from '../images/coloredgym.png';
 import icon from '../images/icons8-gym-64.png';
 import StyledHome from '../style/StyledHome';
 
