@@ -37,23 +37,23 @@ const StyledNavigation = styled.nav`
 
   h3 {
     position: absolute;
-    top: 11rem;
+    top: 9rem;
     text-align: center;
     font-size: 2em;
     color: black;
-    letter-spacing: -7px;
-    font-weight: 500;
+    letter-spacing: 0.5rem;
+    font-weight: 700;
     text-transform: uppercase;
     animation: blur 1.75s ease-out infinite;
-    text-shadow: 0 0 3px rgba(218, 165, 32), 0 0 7px rgba(218, 165, 32);
+    text-shadow: 0px 0px 3px rgba(218, 165, 32), 0px 0px 7px rgba(218, 165, 32);
   }
 
   @keyframes blur {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff,
-        0 0 25px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 50px #fff, 0 0 50px #7b96b8, 0 0 150px #7b96b8,
-        0 10px 100 #7b96b8, 0 10px 100px #7b96b8, 0 10px 100px #7b96b8, 0 10px 100px #7b96b8, 0 -10px 100px #7b96b8,
-        0 -10px 100px #7b96b8;
+      text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+        0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
+        0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
     }
   }
 `;

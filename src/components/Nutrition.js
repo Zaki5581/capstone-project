@@ -24,36 +24,36 @@ export default function Nutrition() {
   const average4 = TakenNutrients[0].takenFat / Nutrients[0].fat;
   //setting the chart data
   const user = {
-    labels: ['How the day is going'],
+    labels: ['Average intake'],
 
     datasets: [
       {
         label: 'Calories',
         data: [average1],
         backgroundColor: ['#E8C014'],
-        borderColor: 'gray',
+        borderColor: '#000030',
         borderWidth: 2,
       },
       {
         label: 'Protein',
         data: [average2],
         backgroundColor: ['#A08C59'],
-        borderColor: 'gray',
+        borderColor: '#000030',
         borderWidth: 2,
       },
       {
         label: 'Carbs',
         data: [average3],
         backgroundColor: ['#FFEFCA'],
-        borderColor: 'gray',
+        borderColor: '#000030',
         borderWidth: 2,
       },
       {
         label: 'Fat',
         data: [average4],
         backgroundColor: ['#005246'],
-        borderColor: 'gray',
-        borderWidth: 1,
+        borderColor: '#000030',
+        borderWidth: 0.5,
       },
     ],
   };
@@ -85,14 +85,13 @@ export default function Nutrition() {
   }
   return (
     <StyledNutrition onSubmit={handleSubmit}>
-      <div className="input-field1">
-        <div className="input-block1">
-          <input type="number" name="calories" onChange={handleChange} />
-          <input type="number" name="protein" onChange={handleChange} />
-          <input type="number" name="carbs" onChange={handleChange} />
-          <input type="number" name="fat" onChange={handleChange} />
+      <div>
+        <div className="input-block">
+          <input type="number" name="calories" onChange={handleChange} placeholder="Calories" />
+          <input type="number" name="protein" onChange={handleChange} placeholder="Protein" />
+          <input type="number" name="carbs" onChange={handleChange} placeholder="Carbs" />
+          <input type="number" name="fat" onChange={handleChange} placeholder="Fat" />
         </div>
-        <button onClick={deleteGoal}>Reset</button>
         <ul key={nanoid()}>
           <li>
             {nutrients.calories}
@@ -102,23 +101,24 @@ export default function Nutrition() {
           <li>{nutrients.carbs}g</li>
           <li>{nutrients.fat}g</li>
         </ul>
+        <button onClick={deleteGoal}>Reset</button>
       </div>
       <div className="chart">
         <BarChart chartData={user} />
       </div>
-      <div className="input-field2">
+      <div>
         <ul key={nanoid()}>
-          <li>{takenNutrients.takenCalories}</li>
-          <li>{takenNutrients.takenProtein}</li>
-          <li>{takenNutrients.takenCarbs}</li>
-          <li>{takenNutrients.takenFat}</li>
+          <li>{takenNutrients.takenCalories}Kcal</li>
+          <li>{takenNutrients.takenProtein}g</li>
+          <li>{takenNutrients.takenCarbs}g</li>
+          <li>{takenNutrients.takenFat}g</li>
         </ul>
-        <div className="input-block1">
-          <input type="number" name="takenCalories" onChange={handleSecondChange} />
-          <input type="number" name="takenProtein" onChange={handleSecondChange} />
-          <input type="number" name="takenCarbs" onChange={handleSecondChange} />
-          <input type="number" name="takenFat" onChange={handleSecondChange} />
-          <button onClick={deleteReal}>Delete</button>
+        <button onClick={deleteReal}>Delete</button>
+        <div className="input-block">
+          <input type="number" name="takenCalories" onChange={handleSecondChange} placeholder="Calories" />
+          <input type="number" name="takenProtein" onChange={handleSecondChange} placeholder="Protein" />
+          <input type="number" name="takenCarbs" onChange={handleSecondChange} placeholder="Carbs" />
+          <input type="number" name="takenFat" onChange={handleSecondChange} placeholder="Fat" />
         </div>
       </div>
     </StyledNutrition>

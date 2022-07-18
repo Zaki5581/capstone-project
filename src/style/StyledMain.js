@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import walls from '../images/wall.jpg';
+
 const StyledMain = styled.main`
   height: 110vh;
   width: 100vw;
@@ -44,7 +46,7 @@ const StyledMain = styled.main`
   select {
     background-color: #ffefca;
     font-size: 1.1rem;
-    width: 8rem;
+    width: 9rem;
     height: 2rem;
     font-weight: 200;
     border-radius: 3px;
@@ -52,16 +54,23 @@ const StyledMain = styled.main`
     margin-right: 3px;
   }
   dd {
+    width: 15rem;
     display: flex;
     align-items: center;
     white-space: nowrap;
-    padding: 3px;
+    padding: 1px;
+    margin-left: 1px;
   }
-  .sets-field {
-    margin-left: 1.3rem;
+  p {
+    font-weight: 100;
+    margin-left: auto;
   }
 
   .weeks-plan {
+    background-image: url(${walls});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: auto;
     display: flex;
     align-items: flex-start;
@@ -80,7 +89,7 @@ const StyledMain = styled.main`
   }
 
   .plan-bottom {
-    background-color: #ffefca;
+    background-color: rgba(255, 239, 202, 0.7);
     font-size: 1.1rem;
     width: fit-content;
     height: fit-content;
@@ -91,21 +100,22 @@ const StyledMain = styled.main`
       'area5'
       'area6';
     grid-template-rows: 2rem 2rem auto;
-    place-items: center;
     margin: 0 0.5rem;
   }
   h4 {
+    font-size: 0.8rem;
     grid-area: area4;
   }
   h3 {
-    margin-top: 0;
-    grid-area: area5;
+    margin: 0 auto;
   }
 
   .sets-input {
+    background-color: #7c7b77;
     width: 2.2rem;
     height: 1.2rem;
     border: none;
+    border-radius: 3px;
     position: absolute;
     right: 0;
   }

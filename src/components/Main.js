@@ -111,7 +111,7 @@ export default function Form() {
                 <h3>{week.bodyPart}</h3>
                 {week.exercise.map(workout => (
                   <dd key={nanoid()}>
-                    {workout.name}: <dd className="sets-field">{workout.sets}Sets</dd>
+                    {workout.name} <p>{workout.sets}Sets</p>{' '}
                   </dd>
                 ))}
                 <button

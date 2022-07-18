@@ -5,13 +5,13 @@ const styled = {createGlobalStyle};
 
 export default styled.createGlobalStyle`
   * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.8);
   }
 
   body {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.8);
     font-size: 1.2rem;
     font-weight: 700;
     font-family: 'Sintony', sans-serif;
