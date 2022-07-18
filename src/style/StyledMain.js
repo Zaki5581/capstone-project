@@ -36,7 +36,6 @@ const StyledMain = styled.main`
     min-height: 4rem;
     width: 90vw;
     grid-area: 'area1';
-    display: flex;
     justify-content: space-evenly;
     text-align: center;
   }
