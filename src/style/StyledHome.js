@@ -7,6 +7,9 @@ const StyledHome = styled.div`
   background-color: #e8c014;
   display: flex;
   justify-content: center;
+  img {
+    margin-top: 2px;
+  }
 `;
 
 export default StyledHome;

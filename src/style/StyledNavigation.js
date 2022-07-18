@@ -50,10 +50,10 @@ const StyledNavigation = styled.nav`
 
   @keyframes blur {
     from {
-      text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-        0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
-        0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
-        0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+      text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff, 0 0 25px #fff,
+        0 0 25px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 50px #fff, 0 0 50px #7b96b8, 0 0 150px #7b96b8,
+        0 10px 100 #7b96b8, 0 10px 100px #7b96b8, 0 10px 100px #7b96b8, 0 10px 100px #7b96b8, 0 -10px 100px #7b96b8,
+        0 -10px 100px #7b96b8;
     }
   }
 `;
