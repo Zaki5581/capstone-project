@@ -89,6 +89,7 @@ const StyledMain = styled.main`
   }
 
   .plan-bottom {
+    border: 1px solid pink;
     background-color: rgba(255, 239, 202, 0.8);
     font-size: 1.1rem;
     width: fit-content;
@@ -101,14 +102,19 @@ const StyledMain = styled.main`
       'area6';
     grid-template-rows: 2rem 2rem auto;
     margin: 0 0.5rem;
+    box-shadow: 1px 1px 7px 0.5px silver;
   }
   h4 {
     color: black;
     font-size: 0.8rem;
     grid-area: area4;
+    margin-left: auto;
   }
   h3 {
     margin: 0 auto;
+    letter-spacing: 0.5rem;
+    font-weight: 800;
+    font-size: 1.5rem;
   }
 
   .sets-input {

@@ -15,7 +15,7 @@ const StyledNavigation = styled.nav`
   align-items: center;
 
   .link {
-    background-color: rgba(255, 248, 236, 0.6);
+    background-color: rgba(255, 239, 202, 0.6);
     text-decoration: none;
     font-size: 1.5rem;
     height: 7rem;
@@ -43,7 +43,7 @@ const StyledNavigation = styled.nav`
     letter-spacing: 0.5rem;
     font-weight: 700;
     text-transform: uppercase;
-    animation: blur 1.75s ease-out infinite;
+    animation: blur 2.5s linear infinite;
     text-shadow: 0.1px 0.1px 3px rgba(218, 165, 32), 0.1px 0.1px 7px rgba(218, 165, 32);
   }
 
