@@ -20,7 +20,12 @@ const StyledMain = styled.main`
     place-items: center;
     scrollbar-width: none;
   }
-
+  label {
+    color: #ffefca;
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+  }
   .group1,
   .group2 {
     display: flex;
@@ -29,8 +34,9 @@ const StyledMain = styled.main`
   .exercise-row {
     grid-area: area2;
     max-height: 2.5rem;
-    width: 80vw;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .bodypart-row {
@@ -58,12 +64,12 @@ const StyledMain = styled.main`
     display: flex;
     align-items: center;
     white-space: nowrap;
-    padding: 1px;
     margin-left: 1px;
   }
   p {
-    font-weight: 100;
+    font-weight: 200;
     margin-left: auto;
+    text-decoration: underline;
   }
 
   .weeks-plan {
@@ -89,9 +95,8 @@ const StyledMain = styled.main`
   }
 
   .plan-bottom {
-    border: 1px solid pink;
     background-color: rgba(255, 239, 202, 0.8);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     width: fit-content;
     height: fit-content;
     border-radius: 5%;
@@ -113,7 +118,7 @@ const StyledMain = styled.main`
   h3 {
     margin: 0 auto;
     letter-spacing: 0.5rem;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 1.5rem;
   }
 
