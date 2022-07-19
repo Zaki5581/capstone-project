@@ -70,7 +70,7 @@ export default function Form() {
         </div>
         {filteredExercises && (
           <div className="exercise-row">
-            <label htmlFor="input2">Exercise:</label>
+            <label htmlFor="input2">Exercise</label>
             <select name="input2" onChange={createPlan}>
               <option value={'default'} disabled>
                 Choose an exercise
