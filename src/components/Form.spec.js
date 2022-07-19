@@ -1,7 +1,17 @@
 import {render} from '@testing-library/react';
 
-import Form from './Form';
+import Main from './Main';
+import Navigation from './Navigation';
+import Nutrition from './Nutrition';
 
-test('renders the Form component', () => {
-  render(<Form />);
+test('renders the Main component', () => {
+  render(<Main />);
+});
+
+test('renders the Navigation component', () => {
+  render(<Navigation />);
+});
+
+test('renders the Nutrition component', () => {
+  render(<Nutrition />);
 });

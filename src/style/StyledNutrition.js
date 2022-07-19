@@ -47,7 +47,7 @@ const StyledNutrition = styled.form`
   .chart {
     display: flex;
     align-items: center;
-    background-color: beige;
+    background-color: #858781;
     height: 20rem;
   }
   small {
