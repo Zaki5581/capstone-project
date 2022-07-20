@@ -7,7 +7,10 @@
       {"name": "Incline Bench Press", "id": 2},
       {"name": "Dumbbell Flys", "id": 3},
       {"name": "Dumbbell Bench Press", "id": 4},
-      {"name": "Dumbbell Pullover", "id": 5}
+      {"name": "Dumbbell Pullover", "id": 5},
+      {"name": "Chest Dip", "id": 6},
+      {"name": "Decline Dumbbell Flys", "id": 7},
+      {"name": "Pec Dec", "id": 8}
     ]
   },
   {
@@ -18,7 +21,10 @@
       {"name": "Military Press", "id": 2},
       {"name": "Bent Over Reverse Fly", "id": 3},
       {"name": "Lateral Raise", "id": 4},
-      {"name": "Dumbbell Front Raise", "id": 5}
+      {"name": "Dumbbell Front Raise", "id": 5},
+      {"name": "Dumbbell Upright Row", "id": 6},
+      {"name": "Seated Arnold Press", "id": 7},
+      {"name": "Banded Y's", "id": 8}
     ]
   },
   {
@@ -30,7 +36,9 @@
       {"name": "Spider Curl", "id": 3},
       {"name": "EZ Bar Skullcrusher", "id": 4},
       {"name": "Dumbbell Extension", "id": 5},
-      {"name": "Cable Tricep Extension", "id": 6}
+      {"name": "Cable Tricep Extension", "id": 6},
+      {"name": "Banded Skullcrusher", "id": 7},
+      {"name": "Zottman Curl", "id": 8}
     ]
   },
   {
@@ -41,7 +49,9 @@
       {"name": "Seated Cable Row", "id": 2},
       {"name": "Pull-up", "id": 3},
       {"name": "Renegade Row", "id": 4},
-      {"name": "Machine T-Bar Row", "id": 5}
+      {"name": "Machine T-Bar Row", "id": 5},
+      {"name": "Dante Row", "id": 6},
+      {"name": "Pendlay Row", "id": 7}
     ]
   },
   {
@@ -53,7 +63,9 @@
       {"name": "Leg-curls", "id": 3},
       {"name": "Legpress", "id": 4},
       {"name": "Leg Extension", "id": 5},
-      {"name": "Standing Calf Raise", "id": 6}
+      {"name": "Standing Calf Raise", "id": 6},
+      {"name": "Clean & Jerk", "id": 7},
+      {"name": "Seated Calf Raise", "id": 8}
     ]
   }
 ]
