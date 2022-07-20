@@ -100,6 +100,7 @@ const StyledMain = styled.main`
     grid-template-rows: 2rem 2rem auto;
     margin: 0.5rem;
     box-shadow: 1px 1px 7px 0.5px silver;
+    line-height: 0px;
   }
   h4 {
     color: black;

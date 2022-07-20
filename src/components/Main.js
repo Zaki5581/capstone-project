@@ -72,15 +72,15 @@ export default function Form() {
   ];
   //workout box animation
   const boxAnimation = {
-    initial: {y: '50%', opacity: 0, scale: 0.5},
-    animate: {y: 0, opacity: 1, scale: 1},
+    initial: {y: '-100%', opacity: 0, scale: 0.1},
+    animate: {y: '0', opacity: 1, scale: 1},
     exit: {
       x: '50%',
-      y: '50%',
+      y: '-100%',
       opacity: 0,
       transition: {duration: 1},
     },
-    transition: {duration: 0.6, ease: 'easeOut'},
+    transition: {duration: 1, ease: 'easeOut', type: 'spring', stiffness: 400},
   };
 
   return (
