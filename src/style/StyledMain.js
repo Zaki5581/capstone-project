@@ -88,7 +88,6 @@ const StyledMain = styled.main`
   .plan-bottom {
     background: linear-gradient(135deg, rgba(255, 239, 202, 0), rgba(255, 239, 202, 0.2));
     backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     font-size: 1.2rem;
     width: 20rem;
     height: fit-content;
