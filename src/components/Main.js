@@ -1,5 +1,8 @@
+import {motion} from 'framer-motion';
 import {nanoid} from 'nanoid';
 import {useState, useEffect} from 'react';
+import {Slide} from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 import {toast} from 'react-toastify';
 
 import data from '../data.json';
@@ -48,7 +51,37 @@ export default function Form() {
   const allBodyParts = Object.values(data);
   const filteredExercises = data.find(workout => workout.parts === selectedBodypart)?.exercises;
 
-  //dnd state/function
+  //slider
+  const slideImages = [
+    {
+      url: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1375&q=80',
+      caption: '',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1590239926044-4131f5d0654d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1582&q=80',
+      caption: '',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1604233098531-90b71b1b17a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80',
+      caption: '',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1542684377-0b875fde9563?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM2fHxneW18ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+      caption: '',
+    },
+  ];
+  //workout box animation
+  const boxAnimation = {
+    initial: {y: '-100%', opacity: 0, scale: 0.1},
+    animate: {y: '0', opacity: 1, scale: 1},
+    exit: {
+      x: '50%',
+      y: '-100%',
+      opacity: 0,
+      transition: {duration: 1},
+    },
+    transition: {duration: 1, ease: 'easeOut', type: 'spring', stiffness: 100},
+  };
 
   return (
     <StyledMain>
@@ -102,11 +135,32 @@ export default function Form() {
           )}
         </dl>
       </form>
+      {!filteredExercises && (
+        <div className="slide-container">
+          <Slide>
+            {slideImages.map((slideImage, index) => (
+              <div className="each-slide" key={index}>
+                <div
+                  style={{
+                    backgroundImage: `url(${slideImage.url})`,
+                    backgroundPosition: 'center 100%',
+                    backgroundSize: 'cover',
+                    height: '13rem',
+                  }}
+                >
+                  <span>{slideImage.caption}</span>
+                </div>
+              </div>
+            ))}
+          </Slide>
+        </div>
+      )}
+
       <div className="weeks-plan">
         {weeks.map((week, index) => (
           <div className="workout-block" key={nanoid()}>
             {!filteredExercises && (
-              <dl className="plan-bottom">
+              <motion.dl {...boxAnimation} className="plan-bottom">
                 <h4>{week.date}</h4>
                 <h3>{week.bodyPart}</h3>
                 {week.exercise.map(workout => (
@@ -122,7 +176,7 @@ export default function Form() {
                 >
                   Done
                 </button>
-              </dl>
+              </motion.dl>
             )}
           </div>
         ))}

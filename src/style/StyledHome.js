@@ -8,7 +8,7 @@ const StyledHome = styled.div`
   justify-content: center;
   background: linear-gradient(-45deg, #e8c014, #f28306, #ffefca, #ff8600);
   background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+  animation: gradient 25s linear infinite;
   @keyframes gradient {
     0% {
       background-position: 0% 50%;

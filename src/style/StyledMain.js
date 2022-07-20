@@ -10,15 +10,6 @@ const StyledMain = styled.main`
   form {
     width: 100vw;
     height: auto;
-    display: grid;
-    grid-template-areas:
-      'area1'
-      'area2'
-      'area3';
-    grid-template-rows: 5rem 5rem auto;
-    row-gap: 0;
-    place-items: center;
-    scrollbar-width: none;
   }
   label {
     color: #ffefca;
@@ -33,10 +24,9 @@ const StyledMain = styled.main`
   }
   .exercise-row {
     grid-area: area2;
-    max-height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: auto;
+    width: fit-content;
+    margin: 1rem auto;
   }
 
   .bodypart-row {
@@ -88,6 +78,7 @@ const StyledMain = styled.main`
     background-color: rgba(255, 239, 202, 0.8);
     width: 90vw;
     height: auto;
+    margin: auto;
     grid-area: area3;
     position: relative;
     text-align: center;
@@ -95,25 +86,28 @@ const StyledMain = styled.main`
   }
 
   .plan-bottom {
-    background-color: rgba(255, 239, 202, 0.8);
+    background: linear-gradient(135deg, rgba(255, 239, 202, 0), rgba(255, 239, 202, 0.2));
+    backdrop-filter: blur(10px);
     font-size: 1.2rem;
-    width: fit-content;
+    width: 20rem;
     height: fit-content;
-    border-radius: 5%;
+    border-radius: 3%;
     display: grid;
     grid-template-areas:
       'area4'
       'area5'
       'area6';
     grid-template-rows: 2rem 2rem auto;
-    margin: 0 0.5rem;
+    margin: 0.5rem;
     box-shadow: 1px 1px 7px 0.5px silver;
+    line-height: 0px;
+    padding: 0 2px;
   }
   h4 {
     color: black;
     font-size: 0.8rem;
     grid-area: area4;
-    margin-left: auto;
+    margin-left: 1rem;
   }
   h3 {
     margin: 0 auto;
@@ -124,6 +118,7 @@ const StyledMain = styled.main`
 
   .sets-input {
     background-color: #7c7b77;
+    font-size: 1.3rem;
     width: 3rem;
     height: 1.2rem;
     border: none;
@@ -134,7 +129,9 @@ const StyledMain = styled.main`
 
   .done-button,
   .set-button {
-    background-color: #e8c014;
+    background: linear-gradient(-45deg, #e8c014, #f28306, #ffefca, #ff8600);
+    background-size: 400% 400%;
+    animation: gradient 25s linear infinite;
     font-size: 1.2rem;
     font-weight: 700;
     width: 10rem;
@@ -142,7 +139,7 @@ const StyledMain = styled.main`
     border-radius: 7px;
     bottom: 1rem;
     border: none;
-    margin: 1rem auto;
+    margin: 0.1rem auto;
   }
 `;
 export default StyledMain;
