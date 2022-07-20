@@ -101,6 +101,7 @@ const StyledMain = styled.main`
     margin: 0.5rem;
     box-shadow: 1px 1px 7px 0.5px silver;
     line-height: 0px;
+    padding: 0px 2px;
   }
   h4 {
     color: black;
