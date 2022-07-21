@@ -78,9 +78,9 @@ export default function Form() {
       x: '50%',
       y: '-100%',
       opacity: 0,
-      transition: {duration: 1},
+      transition: {duration: 0.5},
     },
-    transition: {duration: 1, ease: 'easeOut', type: 'spring', stiffness: 100},
+    transition: {duration: 0.5, ease: 'easeOut'},
   };
 
   return (
