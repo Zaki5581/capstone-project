@@ -35,9 +35,7 @@ export default function Navigation() {
             }}
             transition={{
               type: 'spring',
-              stiffness: 900,
-              duration: 3,
-              damping: 10,
+              duration: 1,
             }}
             href="/main"
           >
@@ -56,8 +54,7 @@ export default function Navigation() {
             }}
             transition={{
               type: 'spring',
-              stiffness: 600,
-              damping: 70,
+              duration: 1,
             }}
             href="/nutrition"
           >

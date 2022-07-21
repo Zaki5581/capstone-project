@@ -16,12 +16,10 @@ export default function Nutrition() {
     localStorage.setItem('my_real', JSON.stringify(takenNutrients));
   }, [nutrients, takenNutrients]);
   //getting the values for the chart
-  const Nutrients = Array.of(nutrients);
-  const TakenNutrients = Array.of(takenNutrients);
-  const average1 = TakenNutrients[0].takenCalories / Nutrients[0].calories;
-  const average2 = TakenNutrients[0].takenProtein / Nutrients[0].protein;
-  const average3 = TakenNutrients[0].takenCarbs / Nutrients[0].carbs;
-  const average4 = TakenNutrients[0].takenFat / Nutrients[0].fat;
+  const average1 = takenNutrients.takenCalories / nutrients.calories;
+  const average2 = takenNutrients.takenProtein / nutrients.protein;
+  const average3 = takenNutrients.takenCarbs / nutrients.carbs;
+  const average4 = takenNutrients.takenFat / nutrients.fat;
   //setting the chart data
   const user = {
     labels: ['Average intake'],
