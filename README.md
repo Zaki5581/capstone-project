@@ -1,23 +1,27 @@
-# React App
+# Fitness-App 
 
-This is a template for a [Create React App](https://create-react-app.dev/) with additional tools.
+Digitales gesellenstück:
 
-- [Tech-Stack](#tech-stack)
-- [Project Setup](#project-setup)
-  - [Set up Vercel](#set-up-vercel)
-- [Getting started](#getting-started)
-- [Test Driven Development](#test-driven-development)
-- [Commands](#commands)
+<img width="280" alt="Bildschirmfoto 2022-07-26 um 10 05 14" src="https://user-images.githubusercontent.com/92207171/180956665-f3990d15-d909-46cb-8cd0-efd637622368.png">|
+<img width="280" alt="Bildschirmfoto 2022-07-26 um 10 06 44" src="https://user-images.githubusercontent.com/92207171/180956716-9cf919ee-ff7f-46ac-81a6-1629bd0f8233.png">|
+<img width="280" alt="Bildschirmfoto 2022-07-26 um 10 07 14" src="https://user-images.githubusercontent.com/92207171/180956728-b2ff9de3-6dfd-4c9f-b42f-155da34c4572.png">
+
+
+
+
+
 
 It uses the following tools/libraries:
 
 ## Tech-Stack
 
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/)
-- [Stylelint](https://stylelint.io/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [Storybook]
+- [Stylelint]
+- [Prettier]
+- [React]
+- [React Router]
+- [Chartjs]
+- [Toastify]
 
 ## Project Setup
 
@@ -44,10 +48,7 @@ npm run start
 npm run storybook
 ```
 
-## Test Driven Development
 
-We jest to write unit tests. Please look at the Documentation for [Jest](https://jestjs.io/)
-and [testing-library](https://testing-library.com/docs/react-testing-library/intro/).
 
 ## Commands
 
