@@ -34,20 +34,21 @@ const StyledNutrition = styled.form`
     color: #e8c014;
   }
   button {
-    background-color: #e8c014;
+    background: linear-gradient(-45deg, #e8c014, #f28306, #ffefca, #ff8600);
+    background-size: 400% 400%;
+    animation: gradient 25s linear infinite;
     font-size: 1.2rem;
     font-weight: 700;
-    width: 13rem;
+    width: 10rem;
     height: 2rem;
     border-radius: 7px;
-    bottom: 1rem;
     border: none;
     margin: 0.5rem 0;
   }
   .chart {
     display: flex;
     align-items: center;
-    background-color: #858781;
+    background-color: #dfdec9;
     height: 20rem;
   }
   small {
